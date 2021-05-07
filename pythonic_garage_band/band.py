@@ -1,9 +1,9 @@
 class Band:
-    band_count = []
+    instances = []
     def __init__(self, name, members=[]):
         self.name = name
         self.members = members
-        self.band_count.append(name)
+        self.instances.append(self.name)
     
 
     def play_solos(self):
@@ -16,9 +16,9 @@ class Band:
     
     @classmethod
     def to_list(cls):
-        return cls.band_count
+        return cls.instances
 
-
+    
     
 class Musician:
     def __init__(self, name, members=[], instrument=''):
